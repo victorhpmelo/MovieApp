@@ -1,262 +1,262 @@
 # 🎬 Movie App - React Native (JavaScript)
 
-A modern React Native movie application built with Expo, featuring popular movies, search functionality, favorites system, and nearby cinema locator using geolocation.
+Um aplicativo moderno de filmes em React Native construído com Expo, apresentando filmes populares, funcionalidade de busca, sistema de favoritos e localizador de cinemas próximos usando geolocalização.
 
-## ✨ Features
+## ✨ Funcionalidades
 
-- **Popular Movies List**: Browse trending movies with beautiful card layout
-- **Movie Details**: Detailed view with ratings, genres, budget, revenue, and more
-- **Search Functionality**: Search movies by title with optimized search
-- **Favorites System**: Save and manage your favorite movies (persisted locally)
-- **Nearby Cinemas**: Find cinemas near you using geolocation sensor
-- **Modern UI**: Clean, responsive design with smooth animations and professional styling
-- **Offline Support**: Favorites are stored locally using AsyncStorage
-- **Pull-to-Refresh**: Refresh movie list with pull-down gesture
-- **Infinite Scroll**: Automatically load more movies as you scroll
+- **Lista de Filmes Populares**: Navegue por filmes em alta com um layout de cards bonito
+- **Detalhes do Filme**: Visualização detalhada com avaliações, gêneros, orçamento, receita e muito mais
+- **Funcionalidade de Busca**: Busque filmes por título com busca otimizada
+- **Sistema de Favoritos**: Salve e gerencie seus filmes favoritos (persistidos localmente)
+- **Cinemas Próximos**: Encontre cinemas perto de você usando sensor de geolocalização
+- **UI Moderna**: Design limpo e responsivo com animações suaves e estilo profissional
+- **Suporte Offline**: Favoritos são armazenados localmente usando AsyncStorage
+- **Puxar para Atualizar**: Atualize a lista de filmes com gesto de arrastar para baixo
+- **Rolagem Infinita**: Carrega automaticamente mais filmes conforme você rola
 
-## 🎯 Project Requirements Compliance (10/10 points)
+## 🎯 Conformidade com os Requisitos do Projeto (10/10 pontos)
 
-### ✅ 1. Navigation (1.5 pts)
-- **4 screens** with React Navigation Stack Navigator
-- Smooth transitions and parameter passing between screens
-- Custom header with navigation buttons
+### ✅ 1. Navegação (1.5 pts)
+- **4 telas** com React Navigation Stack Navigator
+- Transições suaves e passagem de parâmetros entre telas
+- Cabeçalho customizado com botões de navegação
 
-### ✅ 2. FlatList Optimized (1.5 pts)
-- Multiple FlatLists with 5+ items each
-- Optimized rendering with `useCallback` and `React.memo`
-- Grid layout for movies, list layout for cinemas
-- Pull-to-refresh and infinite scroll functionality
+### ✅ 2. FlatList Otimizado (1.5 pts)
+- Múltiplas FlatLists com mais de 5 itens cada
+- Renderização otimizada com `useCallback` e `React.memo`
+- Layout de grade para filmes, layout de lista para cinemas
+- Funcionalidade de puxar para atualizar e rolagem infinita
 
-### ✅ 3. API Consumption (2.0 pts)
-- Integration with **TMDB API** for movie data
-- Complete error handling with user-friendly messages
-- Loading states with custom spinner component
-- Multiple endpoints: popular movies, search, movie details
+### ✅ 3. Consumo de API (2.0 pts)
+- Integração com **API TMDB** para dados de filmes
+- Tratamento completo de erros com mensagens amigáveis ao usuário
+- Estados de carregamento com componente spinner customizado
+- Múltiplos endpoints: filmes populares, busca, detalhes do filme
 
-### ✅ 4. Local Storage (1.5 pts)
-- **AsyncStorage** implementation for favorites persistence
-- Data loads on app startup
-- Automatic save on changes
-- Full CRUD operations (Create, Read, Delete)
+### ✅ 4. Armazenamento Local (1.5 pts)
+- Implementação de **AsyncStorage** para persistência de favoritos
+- Dados carregam na inicialização do app
+- Salvamento automático em mudanças
+- Operações CRUD completas (Criar, Ler, Deletar)
 
-### ✅ 5. Device Sensor (1.5 pts)
-- **Geolocation sensor** (Expo Location)
-- Requests permission properly
-- Displays nearby cinemas with distance calculation
-- Opens maps app with directions
-- Handles permission denial gracefully
+### ✅ 5. Sensor do Dispositivo (1.5 pts)
+- **Sensor de Geolocalização** (Expo Location)
+- Solicita permissão adequadamente
+- Exibe cinemas próximos com cálculo de distância
+- Abre aplicativo de mapas com direções
+- Lida com negação de permissão graciosamente
 
 ### ✅ 6. UI/UX (1.5 pts)
-- Professional design with harmonic colors
-- Responsive layout for different screen sizes
-- Well-positioned components with proper spacing
-- Modern cards with shadows and rounded corners
-- Smooth animations and transitions
-- Emoji icons for better visual appeal
+- Design profissional com cores harmoniosas
+- Layout responsivo para diferentes tamanhos de tela
+- Componentes bem posicionados com espaçamento adequado
+- Cards modernos com sombras e cantos arredondados
+- Animações e transições suaves
+- Ícones emoji para melhor apelo visual
 
-### ✅ 7. Presentation Ready (1.5 pts)
-- Complete documentation
-- Clear code structure
-- Technical details included
-- All features demonstrated
+### ✅ 7. Pronto para Apresentação (1.5 pts)
+- Documentação completa
+- Estrutura de código clara
+- Detalhes técnicos incluídos
+- Todas as funcionalidades demonstradas
 
-## 🛠️ Tech Stack
+## 🛠️ Stack Tecnológico
 
-- **React Native** with **Expo SDK 54**
+- **React Native** com **Expo SDK 54**
 - **JavaScript** (ES6+)
 - **React Navigation** (Stack Navigator v7)
-- **Axios** for HTTP requests
-- **AsyncStorage** for local data persistence
-- **Expo Location** for geolocation sensor
+- **Axios** para requisições HTTP
+- **AsyncStorage** para persistência local de dados
+- **Expo Location** para sensor de geolocalização
 - **React Hooks** (useState, useEffect, useCallback, useContext)
 
-## 📱 Screens
+## 📱 Telas
 
-1. **Movie List Screen**: Displays popular movies in a grid layout with search
-2. **Movie Details Screen**: Shows comprehensive movie information with backdrop image
-3. **Favorites Screen**: Lists all saved favorite movies with empty state
-4. **Nearby Cinemas Screen**: Shows nearby cinemas using geolocation with distance calculation
+1. **Tela de Lista de Filmes**: Exibe filmes populares em layout de grade com busca
+2. **Tela de Detalhes do Filme**: Mostra informações completas do filme com imagem backdrop
+3. **Tela de Favoritos**: Lista todos os filmes favoritos salvos com estado vazio
+4. **Tela de Cinemas Próximos**: Mostra cinemas próximos usando geolocalização com cálculo de distância
 
-## 🚀 Getting Started
+## 🚀 Começando
 
-### Prerequisites
+### Pré-requisitos
 
-- Node.js (v16 or higher)
-- npm or yarn
-- Expo CLI or Expo Go app on your device
-- iOS Simulator (for iOS development) or Android Studio (for Android development)
-- Physical device recommended for geolocation testing
+- Node.js (v16 ou superior)
+- npm ou yarn
+- Expo CLI ou aplicativo Expo Go no seu dispositivo
+- iOS Simulator (para desenvolvimento iOS) ou Android Studio (para desenvolvimento Android)
+- Dispositivo físico recomendado para testes de geolocalização
 
-### Installation
+### Instalação
 
-1. **Clone the repository**
+1. **Clone o repositório**
    ```bash
    git clone <repository-url>
    cd MovieApp
    ```
 
-2. **Install dependencies**
+2. **Instale as dependências**
    ```bash
    npm install
    ```
 
-3. **Set up API Key** (Already configured with working key)
-   - Current API key is functional for testing
-   - For production, get your own key from [The Movie Database (TMDB)](https://www.themoviedb.org/settings/api)
-   - Open `src/services/movieService.js` to update if needed
+3. **Configure a API Key** (Já configurada com chave funcional)
+   - A chave de API atual está funcional para testes
+   - Para produção, obtenha sua própria chave em [The Movie Database (TMDB)](https://www.themoviedb.org/settings/api)
+   - Abra `src/services/movieService.js` para atualizar se necessário
    ```javascript
    const API_KEY = 'e1dcf96cfa98b76b809984116dfa9775';
    ```
 
-4. **Start the development server**
+4. **Inicie o servidor de desenvolvimento**
    ```bash
    npm start
-   # or
+   # ou
    npx expo start
    ```
 
-5. **Run on device/simulator**
-   - Press `i` for iOS simulator
-   - Press `a` for Android emulator
-   - Scan QR code with Expo Go app on your physical device
-   - **Note**: For geolocation features, use a physical device or enable location simulation in emulator
+5. **Execute no dispositivo/simulador**
+   - Pressione `i` para simulador iOS
+   - Pressione `a` para emulador Android
+   - Escaneie o código QR com o app Expo Go no seu dispositivo físico
+   - **Nota**: Para funcionalidades de geolocalização, use um dispositivo físico ou ative simulação de localização no emulador
 
-## 📁 Project Structure
+## 📁 Estrutura do Projeto
 
 ```
 MovieApp/
-├── App.js                      # Root component with providers
-├── package.json                # Dependencies and scripts
-├── app.json                    # Expo configuration
+├── App.js                      # Componente raiz com provedores
+├── package.json                # Dependências e scripts
+├── app.json                    # Configuração do Expo
 └── src/
-    ├── components/             # Reusable UI components
-    │   ├── MovieCard.js        # Movie card with poster and info
-    │   ├── SearchBar.js        # Search input with icon
-    │   └── LoadingSpinner.js   # Loading indicator component
-    ├── screens/                # App screens (4 screens)
-    │   ├── MovieListScreen.js      # Main list with search & infinite scroll
-    │   ├── MovieDetailsScreen.js   # Detailed movie information
-    │   ├── FavoritesScreen.js      # User's favorite movies
-    │   └── NearbyCinemasScreen.js  # Geolocation-based cinema finder
-    ├── services/               # API services
-    │   └── movieService.js     # TMDB API integration
-    ├── utils/                  # Utility functions and contexts
-    │   └── FavoritesContext.js # Global favorites state with AsyncStorage
-    └── navigation/             # Navigation configuration
-        └── AppNavigator.js     # Stack Navigator setup
+    ├── components/             # Componentes UI reutilizáveis
+    │   ├── MovieCard.js        # Card de filme com poster e info
+    │   ├── SearchBar.js        # Input de busca com ícone
+    │   └── LoadingSpinner.js   # Componente indicador de carregamento
+    ├── screens/                # Telas do app (4 telas)
+    │   ├── MovieListScreen.js      # Lista principal com busca e rolagem infinita
+    │   ├── MovieDetailsScreen.js   # Informações detalhadas do filme
+    │   ├── FavoritesScreen.js      # Filmes favoritos do usuário
+    │   └── NearbyCinemasScreen.js  # Localizador de cinemas por geolocalização
+    ├── services/               # Serviços de API
+    │   └── movieService.js     # Integração com API TMDB
+    ├── utils/                  # Funções utilitárias e contextos
+    │   └── FavoritesContext.js # Estado global de favoritos com AsyncStorage
+    └── navigation/             # Configuração de navegação
+        └── AppNavigator.js     # Configuração do Stack Navigator
 ```
 
-## 🎯 Key Features Implementation
+## 🎯 Implementação das Principais Funcionalidades
 
 ### 1. React Navigation (Stack Navigator)
-- **4 screens** with smooth transitions
-- Parameter passing between screens (movie object)
-- Custom header components with action buttons
-- Navigation stack: MovieList → MovieDetails, MovieList → Favorites, MovieList → NearbyCinemas
+- **4 telas** com transições suaves
+- Passagem de parâmetros entre telas (objeto movie)
+- Componentes de cabeçalho customizados com botões de ação
+- Stack de navegação: MovieList → MovieDetails, MovieList → Favorites, MovieList → NearbyCinemas
 
-### 2. FlatList Optimization
-- **MovieListScreen**: Grid layout (2 columns) with 100+ movies
-- **FavoritesScreen**: Grid layout with saved movies
-- **NearbyCinemasScreen**: List layout with 10+ locations
-- Features:
-  - `keyExtractor` for unique keys
-  - `useCallback` for render functions
-  - `numColumns` for grid layout
-  - Pull-to-refresh functionality
-  - Infinite scroll with `onEndReached`
-  - Empty state components
+### 2. Otimização de FlatList
+- **MovieListScreen**: Layout de grade (2 colunas) com mais de 100 filmes
+- **FavoritesScreen**: Layout de grade com filmes salvos
+- **NearbyCinemasScreen**: Layout de lista com mais de 10 localizações
+- Funcionalidades:
+  - `keyExtractor` para chaves únicas
+  - `useCallback` para funções de renderização
+  - `numColumns` para layout de grade
+  - Funcionalidade de puxar para atualizar
+  - Rolagem infinita com `onEndReached`
+  - Componentes de estado vazio
 
-### 3. API Consumption (TMDB API)
+### 3. Consumo de API (API TMDB)
 ```javascript
-// Endpoints used:
-- GET /movie/popular       // Popular movies with pagination
-- GET /movie/{id}          // Movie details
-- GET /search/movie        // Search movies by query
+// Endpoints utilizados:
+- GET /movie/popular       // Filmes populares com paginação
+- GET /movie/{id}          // Detalhes do filme
+- GET /search/movie        // Buscar filmes por consulta
 ```
-- **Error Handling**: Try-catch blocks with user alerts
-- **Loading States**: Custom spinner component
-- **Success State**: Data displayed with proper formatting
-- Axios instance with base URL and API key
+- **Tratamento de Erros**: Blocos try-catch com alertas ao usuário
+- **Estados de Carregamento**: Componente spinner customizado
+- **Estado de Sucesso**: Dados exibidos com formatação adequada
+- Instância Axios com URL base e chave de API
 
-### 4. Local Storage (AsyncStorage)
+### 4. Armazenamento Local (AsyncStorage)
 ```javascript
-// Operations:
-- Save favorites array to AsyncStorage
-- Load favorites on app startup
-- Add/remove items with toggle function
-- Check if movie is favorite (isFavorite function)
+// Operações:
+- Salvar array de favoritos no AsyncStorage
+- Carregar favoritos na inicialização do app
+- Adicionar/remover itens com função toggle
+- Verificar se filme é favorito (função isFavorite)
 ```
-- Context API wraps entire app
-- Automatic persistence on state changes
-- Data survives app restarts
+- Context API envolve todo o app
+- Persistência automática em mudanças de estado
+- Dados sobrevivem a reinicializações do app
 
-### 5. Device Sensor (Geolocation)
+### 5. Sensor do Dispositivo (Geolocalização)
 ```javascript
-// Implementation:
-- Request foreground location permission
-- Get current position with accuracy control
-- Calculate distance using Haversine formula
-- Display cinemas sorted by distance
-- Open maps app with coordinates
-- Handle permission denial gracefully
+// Implementação:
+- Solicitar permissão de localização em primeiro plano
+- Obter posição atual com controle de precisão
+- Calcular distância usando fórmula de Haversine
+- Exibir cinemas ordenados por distância
+- Abrir app de mapas com coordenadas
+- Lidar graciosamente com negação de permissão
 ```
-- Uses **Expo Location** package
-- Real-time location fetching
-- Distance calculation in kilometers
-- Integration with device maps app
+- Usa pacote **Expo Location**
+- Busca de localização em tempo real
+- Cálculo de distância em quilômetros
+- Integração com aplicativo de mapas do dispositivo
 
-### 6. React Hooks Usage
-- `useState`: Managing component state (movies, loading, search query, location)
-- `useEffect`: API calls, side effects, and data loading
-- `useCallback`: Optimizing performance for event handlers and render functions
-- `useContext`: Global favorites state management across screens
-- `useFavorites`: Custom hook for favorites functionality
+### 6. Uso de React Hooks
+- `useState`: Gerenciamento de estado do componente (filmes, carregamento, consulta de busca, localização)
+- `useEffect`: Chamadas de API, efeitos colaterais e carregamento de dados
+- `useCallback`: Otimização de performance para event handlers e funções de renderização
+- `useContext`: Gerenciamento de estado global de favoritos entre telas
+- `useFavorites`: Hook customizado para funcionalidade de favoritos
 
-### 7. UI/UX Features
-- **Color Scheme**: 
-  - Primary: #FF6B35 (Orange)
-  - Background: #f8f9fa (Light Gray)
-  - Text: #333 (Dark Gray)
-  - Accent: #4CAF50 (Green), #2196F3 (Blue)
-- **Components**:
-  - Professional cards with elevation/shadows
-  - Rounded corners (12px border-radius)
-  - Emoji icons for visual appeal
-  - Responsive padding and margins
-- **Interactions**:
-  - Touch feedback with activeOpacity
-  - Smooth scrolling
-  - Loading indicators
-  - Error states with retry buttons
+### 7. Funcionalidades de UI/UX
+- **Esquema de Cores**: 
+  - Primária: #FF6B35 (Laranja)
+  - Fundo: #f8f9fa (Cinza Claro)
+  - Texto: #333 (Cinza Escuro)
+  - Destaque: #4CAF50 (Verde), #2196F3 (Azul)
+- **Componentes**:
+  - Cards profissionais com elevação/sombras
+  - Cantos arredondados (12px border-radius)
+  - Ícones emoji para apelo visual
+  - Padding e margens responsivas
+- **Interações**:
+  - Feedback de toque com activeOpacity
+  - Rolagem suave
+  - Indicadores de carregamento
+  - Estados de erro com botões de tentar novamente
 
-## 🔧 Available Scripts
+## 🔧 Scripts Disponíveis
 
 ```bash
-npm start              # Start the Expo development server
-npm run android        # Run on Android emulator
-npm run ios            # Run on iOS simulator
-npm run web            # Run in web browser (limited geolocation)
+npm start              # Iniciar o servidor de desenvolvimento Expo
+npm run android        # Executar no emulador Android
+npm run ios            # Executar no simulador iOS
+npm run web            # Executar no navegador web (geolocalização limitada)
 ```
 
-## 📝 APIs and Libraries Used
+## 📝 APIs e Bibliotecas Utilizadas
 
-### The Movie Database (TMDB) API
+### API do The Movie Database (TMDB)
 - **Website**: [https://www.themoviedb.org/](https://www.themoviedb.org/)
-- **Documentation**: [https://developers.themoviedb.org/3](https://developers.themoviedb.org/3)
-- **Features**:
-  - Free tier with generous limits
-  - No rate limiting for basic usage
-  - Comprehensive movie data including images, ratings, cast, budget, revenue
-  - High-quality movie posters and backdrops
+- **Documentação**: [https://developers.themoviedb.org/3](https://developers.themoviedb.org/3)
+- **Funcionalidades**:
+  - Camada gratuita com limites generosos
+  - Sem limitação de taxa para uso básico
+  - Dados completos de filmes incluindo imagens, avaliações, elenco, orçamento, receita
+  - Pôsteres e backdrops de filmes em alta qualidade
 
-### Sensors Implemented
-- **Geolocation (Expo Location)**
-  - Real-time position tracking
-  - Permission management
-  - Coordinate-based distance calculation
-  - Integration with device maps application
+### Sensores Implementados
+- **Geolocalização (Expo Location)**
+  - Rastreamento de posição em tempo real
+  - Gerenciamento de permissões
+  - Cálculo de distância baseado em coordenadas
+  - Integração com aplicativo de mapas do dispositivo
 
-### Key Dependencies
+### Dependências Principais
 ```json
 {
   "@react-navigation/native": "^7.1.18",
@@ -269,51 +269,51 @@ npm run web            # Run in web browser (limited geolocation)
 }
 ```
 
-## 🎬 Features Demonstration
+## 🎬 Demonstração de Funcionalidades
 
-### How to Test Each Requirement:
+### Como Testar Cada Requisito:
 
-1. **Navigation (1.5 pts)**
-   - Open app → See Movie List
-   - Tap any movie → Navigate to Details
-   - Tap ❤️ icon in header → Navigate to Favorites
-   - Tap 📍 icon in header → Navigate to Nearby Cinemas
-   - Use back button to return
+1. **Navegação (1.5 pts)**
+   - Abrir app → Ver Lista de Filmes
+   - Tocar em qualquer filme → Navegar para Detalhes
+   - Tocar no ícone ❤️ no cabeçalho → Navegar para Favoritos
+   - Tocar no ícone 📍 no cabeçalho → Navegar para Cinemas Próximos
+   - Usar botão voltar para retornar
 
 2. **FlatList (1.5 pts)**
-   - Scroll through movie grid (2 columns)
-   - Pull down to refresh
-   - Scroll to bottom for infinite loading
-   - Check Favorites screen for grid list
-   - Check Nearby Cinemas for vertical list
+   - Rolar pela grade de filmes (2 colunas)
+   - Puxar para baixo para atualizar
+   - Rolar até o final para carregamento infinito
+   - Verificar tela de Favoritos para lista em grade
+   - Verificar Cinemas Próximos para lista vertical
 
-3. **API Consumption (2.0 pts)**
-   - App loads popular movies on startup
-   - Search for movies (e.g., "Avengers")
-   - Tap movie to see detailed API data
-   - Observe loading spinners
-   - Try with airplane mode to see error handling
+3. **Consumo de API (2.0 pts)**
+   - App carrega filmes populares na inicialização
+   - Buscar filmes (ex: "Vingadores")
+   - Tocar em filme para ver dados detalhados da API
+   - Observar spinners de carregamento
+   - Tentar com modo avião para ver tratamento de erros
 
-4. **Local Storage (1.5 pts)**
-   - Tap heart icon to favorite movies
-   - Close and restart app
-   - Open Favorites screen → Data persists!
-   - Remove favorites → Changes saved
+4. **Armazenamento Local (1.5 pts)**
+   - Tocar no ícone de coração para favoritar filmes
+   - Fechar e reiniciar app
+   - Abrir tela de Favoritos → Dados persistem!
+   - Remover favoritos → Mudanças salvas
 
 5. **Sensor (1.5 pts)**
-   - Tap 📍 icon in header
-   - Grant location permission when prompted
-   - View your coordinates and nearby cinemas
-   - See calculated distances
-   - Tap "Directions" to open maps
-   - Try denying permission to see error handling
+   - Tocar no ícone 📍 no cabeçalho
+   - Conceder permissão de localização quando solicitado
+   - Ver suas coordenadas e cinemas próximos
+   - Ver distâncias calculadas
+   - Tocar em "Direções" para abrir mapas
+   - Tentar negar permissão para ver tratamento de erro
 
 6. **UI/UX (1.5 pts)**
-   - Observe professional card designs
-   - Check color harmony (orange theme)
-   - Test responsiveness by rotating device
-   - Notice smooth animations
-   - View emoji icons and shadows
+   - Observar designs de cards profissionais
+   - Verificar harmonia de cores (tema laranja)
+   - Testar responsividade rotacionando o dispositivo
+   - Notar animações suaves
+   - Ver ícones emoji e sombras
 
 ## 🎓 Academic Project Information
 
@@ -322,14 +322,14 @@ npm run web            # Run in web browser (limited geolocation)
 **Evaluation**: 2ª Avaliação (2nd Assessment)  
 **Date**: December 2, 2025
 
-### Requirements Met (10/10 Points):
-- ✅ Navigation with 3+ screens (1.5 pts) - **4 screens implemented**
-- ✅ Optimized FlatList (1.5 pts) - **3 FlatLists with advanced features**
-- ✅ API Consumption (2.0 pts) - **TMDB API with full error handling**
-- ✅ Local Storage (1.5 pts) - **AsyncStorage for favorites**
-- ✅ Device Sensor (1.5 pts) - **Geolocation with permission handling**
-- ✅ Professional UI/UX (1.5 pts) - **Modern design with harmonic colors**
-- ✅ Complete Documentation (1.5 pts) - **Comprehensive README**
+### Requisitos Atendidos (10/10 Pontos):
+- ✅ Navegação com 3+ telas (1.5 pts) - **4 telas implementadas**
+- ✅ FlatList Otimizado (1.5 pts) - **3 FlatLists com funcionalidades avançadas**
+- ✅ Consumo de API (2.0 pts) - **API TMDB com tratamento completo de erros**
+- ✅ Armazenamento Local (1.5 pts) - **AsyncStorage para favoritos**
+- ✅ Sensor do Dispositivo (1.5 pts) - **Geolocalização com tratamento de permissão**
+- ✅ UI/UX Profissional (1.5 pts) - **Design moderno com cores harmoniosas**
+- ✅ Documentação Completa (1.5 pts) - **README abrangente**
 
 ### 👥 Group Members:
 - **[Nome Completo do Integrante 1]** - Matrícula: [000000]
@@ -338,30 +338,30 @@ npm run web            # Run in web browser (limited geolocation)
 
 *⚠️ Nota: Substituir com os nomes e matrículas reais dos membros do grupo*
 
-## 🔍 Troubleshooting
+## 🔍 Solução de Problemas
 
-### Common Issues:
+### Problemas Comuns:
 
-**Movies not loading?**
-- Check internet connection
-- Verify API key in `movieService.js`
-- Check console for error messages
+**Filmes não estão carregando?**
+- Verificar conexão com a internet
+- Verificar chave de API em `movieService.js`
+- Verificar console para mensagens de erro
 
-**Favorites not saving?**
-- AsyncStorage requires device/simulator
-- Check app permissions
-- Try clearing app data and restarting
+**Favoritos não estão salvando?**
+- AsyncStorage requer dispositivo/simulador
+- Verificar permissões do app
+- Tentar limpar dados do app e reiniciar
 
-**Geolocation not working?**
-- Grant location permissions when prompted
-- Use physical device for best results
-- Enable location services in device settings
-- For emulator: enable location simulation
+**Geolocalização não está funcionando?**
+- Conceder permissões de localização quando solicitado
+- Usar dispositivo físico para melhores resultados
+- Habilitar serviços de localização nas configurações do dispositivo
+- Para emulador: habilitar simulação de localização
 
-**App crashes on startup?**
-- Run `npm install` to ensure dependencies
-- Clear npm cache: `npm cache clean --force`
-- Delete node_modules and reinstall
+**App trava na inicialização?**
+- Executar `npm install` para garantir dependências
+- Limpar cache do npm: `npm cache clean --force`
+- Deletar node_modules e reinstalar
 
 ## 📸 Screenshots ou GIFs do App Funcionando
 
@@ -400,36 +400,34 @@ npm run web            # Run in web browser (limited geolocation)
 3. Adicione as imagens aqui:
 
 ```markdown
-![Movie List](assets/screenshots/movie-list.png)
-![Movie Details](assets/screenshots/movie-details.png)
-![Favorites](assets/screenshots/favorites.png)
-![Nearby Cinemas](assets/screenshots/nearby-cinemas.png)
+![Lista de Filmes](assets/screenshots/movie-list.png)
+![Detalhes do Filme](assets/screenshots/movie-details.png)
+![Favoritos](assets/screenshots/favorites.png)
+![Cinemas Próximos](assets/screenshots/nearby-cinemas.png)
 ```
 
-## 🚀 Future Enhancements
+## 🚀 Melhorias Futuras
 
-Possible improvements for future versions:
-- Movie trailers integration
-- User reviews and ratings
-- Watchlist feature
-- Dark mode support
-- Movie recommendations
-- Social sharing
-- Real cinema API integration (Google Places)
-- Movie streaming platforms availability
-- Advanced filters (genre, year, rating)
+Possíveis melhorias para versões futuras:
+- Integração de trailers de filmes
+- Avaliações e classificações de usuários
+- Funcionalidade de lista de assistir
+- Suporte a modo escuro
+- Recomendações de filmes
+- Compartilhamento social
+- Integração real com API de cinemas (Google Places)
+- Disponibilidade de plataformas de streaming
+- Filtros avançados (gênero, ano, classificação)
 
-## 🙏 Acknowledgments
+## 🙏 Agradecimentos
 
-- [The Movie Database (TMDB)](https://www.themoviedb.org/) for providing the movie data API
-- [Expo](https://expo.dev/) for the amazing development platform
-- [React Navigation](https://reactnavigation.org/) for navigation solutions
-- Professor Diogo Rodrigues for the project requirements and guidance
+- [The Movie Database (TMDB)](https://www.themoviedb.org/) por fornecer a API de dados de filmes
+- [Expo](https://expo.dev/) pela incrível plataforma de desenvolvimento
+- [React Navigation](https://reactnavigation.org/) pelas soluções de navegação
+- Professor Diogo Rodrigues pelos requisitos do projeto e orientação
 
 ---
 
-**Development Date**: November - December 2025  
-**Presentation Date**: December 2, 2025  
-**Status**: ✅ Complete and ready for presentation
 
-For questions or issues, please contact the development team.
+
+Para dúvidas ou problemas, entre em contato com a equipe de desenvolvimento.
