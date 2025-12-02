@@ -3,9 +3,9 @@ import {
   View,
   FlatList,
   StyleSheet,
-  Alert,
   RefreshControl,
   Text,
+  TouchableOpacity,
 } from 'react-native';
 import { movieService } from '../services/movieService';
 import { useFavorites } from '../utils/FavoritesContext';
@@ -22,6 +22,7 @@ export const MovieListScreen = ({ navigation }) => {
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
   const [loadingMore, setLoadingMore] = useState(false);
+  const [error, setError] = useState(null);
 
   const { isFavorite, toggleFavorite } = useFavorites();
 
@@ -34,6 +35,9 @@ export const MovieListScreen = ({ navigation }) => {
       } else {
         setLoadingMore(true);
       }
+
+      // Clear previous error when starting new request
+      setError(null);
 
       let response;
       if (query.trim()) {
@@ -57,7 +61,13 @@ export const MovieListScreen = ({ navigation }) => {
       setPage(pageNum);
     } catch (error) {
       console.error('Error loading movies:', error);
-      Alert.alert('Error', 'Failed to load movies. Please try again.');
+      // Only show alert for initial load, not for pagination/refresh
+      if (pageNum === 1 && !isRefresh) {
+        setError('Failed to load movies. Pull to refresh or try again.');
+      } else {
+        // For pagination errors, just stop loading more
+        setHasMore(false);
+      }
     } finally {
       setLoading(false);
       setRefreshing(false);
@@ -158,6 +168,19 @@ export const MovieListScreen = ({ navigation }) => {
         onClear={handleClearSearch}
       />
       
+      {error && (
+        <View style={styles.errorBanner}>
+          <Text style={styles.errorIcon}>⚠️</Text>
+          <Text style={styles.errorText}>{error}</Text>
+          <TouchableOpacity 
+            style={styles.errorCloseButton}
+            onPress={() => setError(null)}
+          >
+            <Text style={styles.errorCloseText}>✕</Text>
+          </TouchableOpacity>
+        </View>
+      )}
+      
       <FlatList
         data={movies}
         renderItem={renderMovie}
@@ -242,6 +265,42 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#999',
     textAlign: 'center',
+  },
+  errorBanner: {
+    backgroundColor: '#fee',
+    borderLeftWidth: 4,
+    borderLeftColor: '#f44',
+    padding: 12,
+    marginHorizontal: 16,
+    marginTop: 8,
+    marginBottom: 4,
+    borderRadius: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 2,
+  },
+  errorIcon: {
+    fontSize: 20,
+    marginRight: 8,
+  },
+  errorText: {
+    flex: 1,
+    fontSize: 13,
+    color: '#c33',
+    fontWeight: '500',
+  },
+  errorCloseButton: {
+    padding: 4,
+    marginLeft: 8,
+  },
+  errorCloseText: {
+    fontSize: 18,
+    color: '#c33',
+    fontWeight: 'bold',
   },
 });
 

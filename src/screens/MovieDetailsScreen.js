@@ -6,7 +6,6 @@ import {
   ScrollView,
   StyleSheet,
   TouchableOpacity,
-  Alert,
   Dimensions,
 } from 'react-native';
 import { movieService, getImageUrl } from '../services/movieService';
@@ -19,6 +18,7 @@ export const MovieDetailsScreen = ({ route, navigation }) => {
   const { movie: initialMovie } = route.params;
   const [movieDetails, setMovieDetails] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   const { isFavorite, toggleFavorite } = useFavorites();
 
@@ -29,11 +29,12 @@ export const MovieDetailsScreen = ({ route, navigation }) => {
   const loadMovieDetails = async () => {
     try {
       setLoading(true);
+      setError(false);
       const details = await movieService.getMovieDetails(initialMovie.id);
       setMovieDetails(details);
     } catch (error) {
       console.error('Error loading movie details:', error);
-      Alert.alert('Error', 'Failed to load movie details. Please try again.');
+      setError(true);
     } finally {
       setLoading(false);
     }
@@ -61,10 +62,18 @@ export const MovieDetailsScreen = ({ route, navigation }) => {
     return <LoadingSpinner message="Loading movie details..." />;
   }
 
-  if (!movieDetails) {
+  if (error || !movieDetails) {
     return (
       <View style={styles.errorContainer}>
+        <Text style={styles.errorIcon}>😔</Text>
+        <Text style={styles.errorTitle}>Oops!</Text>
         <Text style={styles.errorText}>Failed to load movie details</Text>
+        <TouchableOpacity style={styles.retryButton} onPress={loadMovieDetails}>
+          <Text style={styles.retryButtonText}>🔄 Try Again</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+          <Text style={styles.backButtonText}>← Go Back</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -339,10 +348,48 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
+    backgroundColor: '#f8f9fa',
+  },
+  errorIcon: {
+    fontSize: 64,
+    marginBottom: 16,
+  },
+  errorTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 8,
   },
   errorText: {
-    fontSize: 18,
+    fontSize: 16,
     color: '#666',
     textAlign: 'center',
+    marginBottom: 24,
+  },
+  retryButton: {
+    backgroundColor: '#FF6B35',
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    borderRadius: 8,
+    marginBottom: 12,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  retryButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  backButton: {
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+  },
+  backButtonText: {
+    color: '#FF6B35',
+    fontSize: 16,
+    fontWeight: '600',
   },
 });
